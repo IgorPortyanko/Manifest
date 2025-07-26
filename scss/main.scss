@@ -1,1 +1,41 @@
 @use 'importer' as i;
+
+.flex-container{
+    @include i.d-flex(center, center, 84px)
+}
+
+.header{
+    padding: 41px 0;
+
+    .logo{
+        flex: 1 1 auto;
+    }
+
+    .nav__list{
+        @include i.d-flex(center, center, 42px)
+    }
+
+    .nav__link{
+        color: i.$main-color;
+        text-transform: uppercase;
+        font-size: 0.88rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 15%;
+            bottom: -5px;
+            height: 1px;
+            width: 70%;
+            background-color: #000;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+}
