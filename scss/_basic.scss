@@ -1,0 +1,10 @@
+@use 'importer' as i;
+
+html, body{
+    font-family: i.$main-font-family;
+    font-size: i.$main-font-size;
+}
+
+.container{
+    max-width: 1170px;
+}
