@@ -1,7 +1,7 @@
 @use 'importer' as i;
 
 .flex-container{
-    @include i.d-flex(center, center, 84px)
+    @include i.d-flex(row, center, center, 84px)
 }
 
 .header{
@@ -12,7 +12,7 @@
     }
 
     .nav__list{
-        @include i.d-flex(center, center, 42px)
+        @include i.d-flex(row, center, center, 42px)
     }
 
     .nav__link{
@@ -60,6 +60,8 @@
 
 .blog{
 
+    margin-bottom: 90px;
+
     h2{
         font-family: i.$font-family-red-hat;
         font-size: 3rem;
@@ -69,7 +71,7 @@
     }
 
     &__wrapper{
-        @include i.d-flex(center, center, 30px);
+        @include i.d-flex(row, center, center, 30px);
         height: 470px;
     }
 
@@ -120,4 +122,104 @@
         line-height: 1.66;
         letter-spacing: 0.8px;
     }
+}
+
+.section{
+
+    .heading{
+
+        margin-bottom: 50px;
+
+        @include i.d-flex(row, space-between, center, 0);
+
+        .section-title{
+            font-family: i.$font-family-red-hat;
+            font-size: 1.75rem;
+            line-height: 1.66;
+            font-weight: 600;
+            letter-spacing: 2.8px;
+        }
+
+        .view-all{
+            padding-right: 43px;
+            display: inline-block;
+
+            a{
+                line-height: 1.67;
+                letter-spacing: 1.6px;
+                color: i.$color-gray-500;
+                position: relative;
+            }
+
+            a::after{
+                content: '';
+                background-image: url('../assets/img/icons/Arrow_1.svg');
+                position: absolute;
+                width: 23px;
+                height: 16px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                top: 50%;
+                right: -43px;
+                transform: translateY(-30%);
+            }
+        }
+    }
+
+    .cards__container{
+        @include i.d-flex(row, space-between, flex-start, 0);
+    }
+
+    .post__card{
+        max-width: 370px;
+    }
+
+    .popular__card{
+        max-width: 570px;
+    }
+}
+
+.job{
+    @include i.d-flex(row, space-between, flex-start, 0);
+
+    &__title{
+        max-width: 470px;
+        font-family: i.$font-family-red-hat;
+        font-size: 1.44rem;
+        line-height: 1.66;
+        letter-spacing: 2.3px;
+
+        a{
+            position: relative;
+        }
+
+        a::after{
+            content: '';
+            background-image: url('../assets/img/icons/Arrow_1.svg');
+            position: absolute;
+            width: 23px;
+            height: 16px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 10px;
+            left: 0;
+        }
+    }
+
+    &__desk{
+        font-size: 1.19rem;
+        line-height: 2;
+        letter-spacing: 1px;
+        max-width: 470px;
+
+        p:first-child{
+            margin-bottom: 25px;
+        }
+    }
+
+    
+}
+
+.footer{
+    padding: 70px 0 30px 0;
 }

@@ -90,8 +90,70 @@ html, body {
   padding-right: 120px;
 }
 
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-90 {
+  margin-bottom: 90px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  overflow: hidden;
+  padding-bottom: 25px;
+}
+.card__image {
+  width: 100%;
+}
+.card__image img {
+  height: 260px;
+  width: 100%;
+}
+.card__heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  letter-spacing: 1.2px;
+  color: #7B7B7B;
+  padding-bottom: 25px;
+}
+.card__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.67;
+  letter-spacing: 2.2px;
+  margin-bottom: 25px;
+}
+.card__text {
+  line-height: 1.67;
+  letter-spacing: 0.8px;
+  color: #565656;
+}
+
+.btn {
+  display: block;
+  margin: 50px auto 0 auto;
+  width: 180px;
+  height: 46px;
+  color: #fff;
+  background-color: #565656;
+  line-height: 1.67;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
 .flex-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 84px;
@@ -105,6 +167,7 @@ html, body {
 }
 .header .nav__list {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 42px;
@@ -147,6 +210,9 @@ html, body {
   padding: 100px 0 380px 0;
 }
 
+.blog {
+  margin-bottom: 90px;
+}
 .blog h2 {
   font-family: "Red Hat Display", sans-serif;
   font-size: 3rem;
@@ -156,6 +222,7 @@ html, body {
 }
 .blog__wrapper {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -200,4 +267,97 @@ html, body {
   color: #565656;
   line-height: 1.66;
   letter-spacing: 0.8px;
+}
+
+.section .heading {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.section .heading .section-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.66;
+  font-weight: 600;
+  letter-spacing: 2.8px;
+}
+.section .heading .view-all {
+  padding-right: 43px;
+  display: inline-block;
+}
+.section .heading .view-all a {
+  line-height: 1.67;
+  letter-spacing: 1.6px;
+  color: #7B7B7B;
+  position: relative;
+}
+.section .heading .view-all a::after {
+  content: "";
+  background-image: url("../assets/img/icons/Arrow_1.svg");
+  position: absolute;
+  width: 23px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 50%;
+  right: -43px;
+  transform: translateY(-30%);
+}
+.section .cards__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+}
+.section .post__card {
+  max-width: 370px;
+}
+.section .popular__card {
+  max-width: 570px;
+}
+
+.job {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+}
+.job__title {
+  max-width: 470px;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.44rem;
+  line-height: 1.66;
+  letter-spacing: 2.3px;
+}
+.job__title a {
+  position: relative;
+}
+.job__title a::after {
+  content: "";
+  background-image: url("../assets/img/icons/Arrow_1.svg");
+  position: absolute;
+  width: 23px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 10px;
+  left: 0;
+}
+.job__desk {
+  font-size: 1.19rem;
+  line-height: 2;
+  letter-spacing: 1px;
+  max-width: 470px;
+}
+.job__desk p:first-child {
+  margin-bottom: 25px;
+}
+
+.footer {
+  padding: 70px 0 30px 0;
 }

@@ -1,6 +1,13 @@
-@mixin d-flex($justify, $align, $gap){
+@mixin d-flex($direction, $justify, $align, $gap){
     display: flex;
+    flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+    gap: $gap;
+}
+
+@mixin d-grid( $col, $gap){
+    display: grid;
+    grid-template-columns: repeat($col, 1fr);
     gap: $gap;
 }
