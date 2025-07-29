@@ -6,8 +6,11 @@
     gap: $gap;
 }
 
-@mixin d-grid( $col, $gap){
-    display: grid;
-    grid-template-columns: repeat($col, 1fr);
-    gap: $gap;
+@mixin font($family, $size, $weight, $l-height, $let-spase){
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $l-height;
+    letter-spacing: $let-spase;
 }
+

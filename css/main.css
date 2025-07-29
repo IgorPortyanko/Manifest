@@ -151,12 +151,36 @@ html, body {
   letter-spacing: 1.6px;
 }
 
+.socials {
+  display: flex;
+  gap: 23px;
+}
+
+.socials__icon {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #565656;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  fill: #565656;
+}
+
+.socials__icon:hover {
+  background-color: #565656;
+}
+.socials__icon:hover .icon {
+  fill: #fff;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 84px;
+  gap: 0;
 }
 
 .header {
@@ -171,6 +195,7 @@ html, body {
   justify-content: center;
   align-items: center;
   gap: 42px;
+  margin-right: 84px;
 }
 .header .nav__link {
   color: #000;
@@ -204,8 +229,8 @@ html, body {
 .hero h1 {
   font-family: "Red Hat Display", sans-serif;
   font-size: 3rem;
-  line-height: 1.3;
   font-weight: 600;
+  line-height: 1.3;
   letter-spacing: 2.4px;
   padding: 100px 0 380px 0;
 }
@@ -216,6 +241,7 @@ html, body {
 .blog h2 {
   font-family: "Red Hat Display", sans-serif;
   font-size: 3rem;
+  font-weight: 400;
   line-height: 1.3;
   letter-spacing: 2.4px;
   margin-bottom: 50px;
@@ -244,6 +270,9 @@ html, body {
   flex-basis: 50%;
 }
 .blog__subtitle {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   line-height: 1.66;
   letter-spacing: 1.6px;
   color: #7B7B7B;
@@ -253,20 +282,26 @@ html, body {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.44rem;
   font-weight: 500;
-  letter-spacing: 2.3px;
   line-height: 1.66;
+  letter-spacing: 2.3px;
   margin-bottom: 15px;
 }
 .blog__date {
-  color: #7B7B7B;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   line-height: 1.66;
   letter-spacing: 1.6px;
+  color: #7B7B7B;
   margin-bottom: 50px;
 }
 .blog__text {
-  color: #565656;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   line-height: 1.66;
   letter-spacing: 0.8px;
+  color: #565656;
 }
 
 .section .heading {
@@ -280,8 +315,8 @@ html, body {
 .section .heading .section-title {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.75rem;
-  line-height: 1.66;
   font-weight: 600;
+  line-height: 1.66;
   letter-spacing: 2.8px;
 }
 .section .heading .view-all {
@@ -289,6 +324,9 @@ html, body {
   display: inline-block;
 }
 .section .heading .view-all a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   line-height: 1.67;
   letter-spacing: 1.6px;
   color: #7B7B7B;
@@ -328,11 +366,12 @@ html, body {
   gap: 0;
 }
 .job__title {
-  max-width: 470px;
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.44rem;
+  font-weight: inherit;
   line-height: 1.66;
   letter-spacing: 2.3px;
+  max-width: 470px;
 }
 .job__title a {
   position: relative;
@@ -349,7 +388,9 @@ html, body {
   left: 0;
 }
 .job__desk {
+  font-family: inherit;
   font-size: 1.19rem;
+  font-weight: inherit;
   line-height: 2;
   letter-spacing: 1px;
   max-width: 470px;
@@ -360,4 +401,35 @@ html, body {
 
 .footer {
   padding: 70px 0 30px 0;
+  background-color: #F4F4F4;
+}
+.footer__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 20px;
+}
+.footer .contacts__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  font-weight: inherit;
+  line-height: 1.3;
+  letter-spacing: 2.4px;
+  margin-bottom: 30px;
+}
+.footer .contacts .tel {
+  margin-bottom: 15px;
+}
+.footer .contacts .contact {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.66;
+  letter-spacing: 1.6px;
+}
+.footer .copyright {
+  width: 100%;
+  text-align: center;
 }
