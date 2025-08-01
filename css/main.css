@@ -83,11 +83,11 @@ html, body {
 }
 
 .pl-120 {
-  padding-left: 120px;
+  padding-left: 11%;
 }
 
 .pr-120 {
-  padding-right: 120px;
+  padding-right: 10%;
 }
 
 .mb-50 {
@@ -99,6 +99,7 @@ html, body {
 }
 
 .card {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -186,6 +187,10 @@ html, body {
 .header {
   padding: 41px 0;
 }
+.header .burger {
+  padding-left: 40px;
+  display: none;
+}
 .header .logo {
   flex: 1 1 auto;
 }
@@ -224,7 +229,7 @@ html, body {
 
 .hero {
   background: url("../assets/img/bg.jpg") 0 0/100% 123%;
-  margin-bottom: 90px;
+  padding: 100px 0 380px 0;
 }
 .hero h1 {
   font-family: "Red Hat Display", sans-serif;
@@ -232,12 +237,8 @@ html, body {
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 2.4px;
-  padding: 100px 0 380px 0;
 }
 
-.blog {
-  margin-bottom: 90px;
-}
 .blog h2 {
   font-family: "Red Hat Display", sans-serif;
   font-size: 3rem;
@@ -255,16 +256,15 @@ html, body {
   height: 470px;
 }
 .blog__image {
-  height: 100%;
   flex-basis: 50%;
-  object-fit: fill;
+  height: 100%;
 }
 .blog__image img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
 }
 .blog__info {
+  height: 100%;
   padding-top: 85px;
   padding-bottom: 85px;
   flex-basis: 50%;
@@ -302,6 +302,24 @@ html, body {
   line-height: 1.66;
   letter-spacing: 0.8px;
   color: #565656;
+  display: inline;
+}
+.blog a {
+  color: #7B7B7B;
+  position: relative;
+}
+.blog a::after {
+  content: "";
+  background-image: url("../assets/img/icons/Arrow_1.svg");
+  background-position: right;
+  position: absolute;
+  width: 40px;
+  height: 13px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 50%;
+  right: -43px;
+  transform: translateY(-40%);
 }
 
 .section .heading {
@@ -336,7 +354,7 @@ html, body {
   content: "";
   background-image: url("../assets/img/icons/Arrow_1.svg");
   position: absolute;
-  width: 23px;
+  width: 26px;
   height: 16px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -350,12 +368,13 @@ html, body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 0;
+  flex-wrap: wrap;
 }
 .section .post__card {
   max-width: 370px;
 }
 .section .popular__card {
-  max-width: 570px;
+  max-width: calc((100% - 20px) / 2);
 }
 
 .job {
@@ -363,7 +382,7 @@ html, body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 0;
+  gap: 20px;
 }
 .job__title {
   font-family: "Red Hat Display", sans-serif;
@@ -380,7 +399,7 @@ html, body {
   content: "";
   background-image: url("../assets/img/icons/Arrow_1.svg");
   position: absolute;
-  width: 23px;
+  width: 26px;
   height: 16px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -393,7 +412,7 @@ html, body {
   font-weight: inherit;
   line-height: 2;
   letter-spacing: 1px;
-  max-width: 470px;
+  max-width: 45%;
 }
 .job__desk p:first-child {
   margin-bottom: 25px;
@@ -432,4 +451,105 @@ html, body {
 .footer .copyright {
   width: 100%;
   text-align: center;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding: 0 34px;
+  }
+  .section .post__card {
+    max-width: 45%;
+  }
+}
+@media (max-width: 850px) {
+  .blog__info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header .burger {
+    display: block;
+  }
+  .hero {
+    padding: 30px 0 190px 0;
+  }
+  .hero h1 {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.39;
+    letter-spacing: 1.8px;
+  }
+  .blog h2 {
+    margin-bottom: 30px;
+  }
+  .blog__wrapper {
+    gap: 20px;
+    max-height: 280px;
+    padding: 0;
+  }
+  .blog__subtitle {
+    margin-bottom: 9%;
+  }
+  .blog__info {
+    padding: 0;
+  }
+  .blog__date {
+    margin-bottom: 3%;
+  }
+  .blog__text {
+    height: 80px;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .blog a::after {
+    top: 20%;
+    right: 0px;
+    transform: translateY(-50%);
+    background-color: #fff;
+  }
+  .cards__container {
+    flex-wrap: wrap;
+  }
+  .section .post__card {
+    max-width: 100%;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .section .post__card .card__image, .section .post__card .card__desc {
+    flex-basis: 50%;
+  }
+  .section .post__card:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+  .job {
+    flex-direction: column;
+    gap: 70px;
+  }
+  .job .job__desk {
+    max-width: 100%;
+    text-align: end;
+  }
+  .footer__info {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .contacts {
+    text-align: center;
+  }
+}
+@media (max-width: 710px) {
+  .blog__title, .blog__text {
+    line-height: 1.3;
+  }
+  .blog a::after {
+    transform: translateY(-5%);
+  }
 }
