@@ -487,9 +487,6 @@ html, body {
     line-height: 1.39;
     letter-spacing: 1.8px;
   }
-  .blog h2 {
-    margin-bottom: 30px;
-  }
   .blog__wrapper {
     gap: 20px;
     max-height: 280px;
@@ -551,5 +548,37 @@ html, body {
   }
   .blog a::after {
     transform: translateY(-5%);
+  }
+}
+@media (max-width: 594px) {
+  .hero {
+    background: url("../assets/img/bg.jpg") 50%/230% 100%;
+  }
+  .blog__wrapper {
+    max-height: 600px;
+    height: auto;
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+  .blog__wrapper:nth-child(2) {
+    flex-direction: column;
+  }
+  .blog__title, .blog__text {
+    line-height: 1.66;
+  }
+  .blog a::after {
+    transform: translateY(-50%);
+  }
+  .section .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .section .cards__container .card {
+    flex-direction: column;
+  }
+  .section .cards__container .popular__card {
+    max-width: 100%;
+    flex-wrap: wrap;
   }
 }

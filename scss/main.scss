@@ -87,7 +87,6 @@
         padding-top: 85px;
         padding-bottom: 85px;
         flex-basis: 50%;
-        // @include i.d-flex(column, space-between, flex-start, 15px);
     }
 
     &__subtitle{
@@ -299,11 +298,6 @@
 
     .blog{
 
-        h2{
-            margin-bottom: 30px;
-            
-        }
-
         &__wrapper{
             gap: 20px;
             max-height: 280px;
@@ -388,6 +382,56 @@
 
         a::after{
             transform: translateY(-5%);
+        }
+    }
+}
+
+@media (max-width: 594px) {
+
+    .hero{
+        background: url('../assets/img/bg.jpg')50% / 230% 100%;
+    }
+    
+    .blog {
+
+        &__wrapper{
+            max-height: 600px;
+            height: auto;
+            padding: 0;
+            flex-direction: column-reverse;
+        }
+
+        &__wrapper:nth-child(2){
+            flex-direction: column;
+        }
+
+        &__title, &__text{
+            line-height: 1.66;
+        }
+
+        a::after{
+            transform: translateY(-50%);
+        }   
+    }
+
+    .section{
+
+        .heading{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .cards__container{
+
+            .card{
+                flex-direction: column;
+            }
+
+            .popular__card{
+                max-width: 100%;
+                flex-wrap: wrap;
+            }
         }
     }
 }
